@@ -58,11 +58,12 @@ const sections = order.map((key) => {
 const contents = order.map((key) => `- [${key}](#${anchor(key)}) (${groups.get(key).length})`).join('\n');
 
 const template = readFileSync(new URL('../template.md', import.meta.url), 'utf8');
+// Function replacers: a project's description containing `$&`, `$'` or `$\`` must stay text, never a replacement pattern.
 const out = template
-  .replace('{{COUNT}}', listed.length.toLocaleString('en-US'))
-  .replace('{{DAY}}', meta.day)
-  .replace('{{CONTENTS}}', contents)
-  .replace('{{SECTIONS}}', sections.join('\n'));
+  .replace('{{COUNT}}', () => listed.length.toLocaleString('en-US'))
+  .replace('{{DAY}}', () => meta.day)
+  .replace('{{CONTENTS}}', () => contents)
+  .replace('{{SECTIONS}}', () => sections.join('\n'));
 for (const word of [/\bbuy\b/i, /\bscam/i, /Hood Chain/, /tokenized stocks/i]) if (word.test(template)) throw new Error(`template wording: ${word}`);
 writeFileSync(new URL('../README.md', import.meta.url), out);
 console.log(`README.md: ${listed.length} builders in ${order.length} sections, dataset day ${meta.day}`);

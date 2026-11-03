@@ -18,16 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
       - run: node scripts/generate.mjs
       - name: Commit when the list changed
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet README.md; then echo "No change."; exit 0; fi
           git config user.name "HEY Research Lab"
           git config user.email "327801004+hey-research-lab@users.noreply.github.com"
           git add README.md
           git commit -m "List: regenerated from the open dataset"
-          git push
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
