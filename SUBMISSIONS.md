@@ -12,3 +12,4 @@ already in the README do not need a line here.
 
 ## Leads
 
+- BlockVectra MCP — https://docs.blockvectra.com/en/guides/mcp-server/ — https://github.com/blockvectra/mcp — MCP access to Robinhood Chain and other EVM JSON-RPC, indexed-data queries, and documentation for AI agents.
