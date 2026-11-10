@@ -12,3 +12,4 @@ already in the README do not need a line here.
 
 ## Leads
 
+- MELT — https://playmelt.org — https://explorer.testnet.chain.robinhood.com/address/0x1C9Be9291627131d248993a3613f224e9775b0f8 — A 7-day survival strategy season on Robinhood Chain where your own AI agent plays your rig while you sleep.
