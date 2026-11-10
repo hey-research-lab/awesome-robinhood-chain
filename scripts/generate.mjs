@@ -1,4 +1,4 @@
-// Builds README.md from Hey Research Lab's open dataset (CC BY 4.0): every Verified Builder on HEY whose activity
+// Builds README.md from HEY Research Lab's open dataset (CC BY 4.0): every Verified Builder on HEY whose activity
 // status is Shipping or Active, grouped by primary narrative, ordered by name. No dependencies; Node 20+.
 //   node scripts/generate.mjs
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -25,6 +25,9 @@ const clean = (text) => {
   const cut = flat.length > 140 ? `${flat.slice(0, 139).replace(/\s+\S*$/, '')}…` : flat;
   return /[.!?…]$/.test(cut) ? cut : `${cut}.`;
 };
+// HEY's own brand is spelled "HEY Research Lab" (founder, 2026-11-10); the dataset's older spelling of HEY's own name is
+// written in the current one. Every other name is written as the dataset gives it.
+const brand = (name) => String(name).replace(/\bHey(?= Research Lab\b)/g, 'HEY');
 const day = (iso) => (iso ? String(iso).slice(0, 10) : null);
 const anchor = (title) => title.toLowerCase().replace(/[^a-z0-9 -]/g, '').trim().replace(/\s+/g, '-');
 
@@ -48,7 +51,7 @@ const entry = (p) => {
   const shipped = day(p.lastShippedAt);
   const status = p.activityStatus === 'SHIPPING' ? 'Shipping' : 'Active';
   const ticker = p.symbol ? ` · $${String(p.symbol).replace(/[^A-Za-z0-9.]/g, '').slice(0, 12).toUpperCase()}` : '';
-  return `- [${clean(p.name).replace(/\.$/, '')}](https://heyresearch.xyz/project/${encodeURIComponent(p.slug)})${ticker} — ${desc} *${status}${shipped ? `, last shipped ${shipped}` : ''}.*`;
+  return `- [${clean(brand(p.name)).replace(/\.$/, '')}](https://heyresearch.xyz/project/${encodeURIComponent(p.slug)})${ticker} — ${desc} *${status}${shipped ? `, last shipped ${shipped}` : ''}.*`;
 };
 
 const sections = order.map((key) => {

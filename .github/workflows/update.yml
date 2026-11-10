@@ -1,4 +1,4 @@
-# Regenerates README.md from Hey Research Lab's open dataset every Monday, and on demand.
+# Regenerates README.md from HEY Research Lab's open dataset every Monday, and on demand.
 name: Update the list
 
 on:

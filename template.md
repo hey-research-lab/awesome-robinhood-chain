@@ -1,13 +1,13 @@
 # Awesome Robinhood Chain [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > Projects building on [Robinhood Chain](https://docs.robinhood.com/chain/), each one with public evidence that it
-> ships: releases, contract deployments and code, read by [Hey Research Lab](https://heyresearch.xyz).
+> ships: releases, contract deployments and code, read by [HEY Research Lab](https://heyresearch.xyz).
 
-{{COUNT}} builders, regenerated every week from Hey Research Lab's open dataset (day {{DAY}}). Every entry is a
+{{COUNT}} builders, regenerated every week from HEY Research Lab's open dataset (day {{DAY}}). Every entry is a
 **Verified Builder** on HEY whose activity is **Shipping** or **Active** and that describes itself in a line; each links to its research page, where every
 ship has its source. Sections are narratives; entries are in alphabetical order, never ranked.
 
-Verified by Hey Research Lab from public evidence — not a Robinhood certification. Community-run; not affiliated
+Verified by HEY Research Lab from public evidence — not a Robinhood certification. Community-run; not affiliated
 with or endorsed by Robinhood. Not investment advice: a listing says a project is building, nothing about its token.
 
 ## Contents
@@ -20,7 +20,7 @@ with or endorsed by Robinhood. Not investment advice: a listing says a project i
 
 - [Robinhood Chain documentation](https://docs.robinhood.com/chain/) — the chain's own docs.
 - [Robinhood Chain explorer](https://robinhoodchain.blockscout.com) — blocks, transactions and verified contracts.
-- [Hey Research Lab](https://heyresearch.xyz) — which projects on Robinhood Chain are still building, and what they shipped, with sources.
+- [HEY Research Lab](https://heyresearch.xyz) — which projects on Robinhood Chain are still building, and what they shipped, with sources.
 - [HEY MCP server](https://heyresearch.xyz/mcp) — the same research for AI agents, over the Model Context Protocol.
 - [Open Dev Data](https://github.com/electric-capital/open-dev-data) — Electric Capital's open taxonomy of crypto developer ecosystems, which lists Robinhood Chain.
 - [hey-check](https://github.com/hey-research-lab/hey-check) — a dev check for any Robinhood Chain token: is anyone building it, with a shareable card.
@@ -42,5 +42,5 @@ Something wrong about an entry? Open an issue; the fix belongs in HEY's research
 
 ## Licence
 
-[CC BY 4.0](LICENSE). The data is Hey Research Lab's [open dataset](https://heyresearch.xyz/data) (CC BY 4.0);
+[CC BY 4.0](LICENSE). The data is HEY Research Lab's [open dataset](https://heyresearch.xyz/data) (CC BY 4.0);
 project names and descriptions are the projects' own.
