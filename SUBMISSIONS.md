@@ -12,3 +12,4 @@ already in the README do not need a line here.
 
 ## Leads
 
+- Virtuallock — https://virtuallock.io — https://robinhoodchain.blockscout.com/address/0x15B9B92F59C0ecFfBE4F200E35D13cEEF1bCbaE4 — token locks, vesting and airdrops on Robinhood Chain, with a public page for every lock (no public repo yet; contracts are linked from https://virtuallock.io/developers).
