@@ -12,3 +12,4 @@ already in the README do not need a line here.
 
 ## Leads
 
+- Mellora — https://mellora.org — https://github.com/MelloraLP/mellora — non-custodial Uniswap v3/v4 liquidity terminal for Robinhood Chain: live pools and trades, tokenized stocks, liquidity depth, positions, grids and swaps signed in your own wallet
